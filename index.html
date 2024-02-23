@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Andreia Felix - Sobrancelhas</title>
+</head>
+
+<body>
+    <div class="mascara-form" onclick="hideForm()"></div>
+
+    <header>
+        <img src="./img/logotipo.png" class="logo-header" />
+        <a>Home</a>
+        <a onclick="showForm()">Fale Comigo</a>
+        <a href="./meus-serviços.html">Meus Serviços</a>
+    </header>
+
+    <div class="container">
+        <div class="background">
+            
+        </div>
+                
+        <div class="sobre-nos">
+            <img src="./img/sobrancelha.png" class="logo">
+            <p>
+                <b>Design de Sobrancelhas</b>
+            </p>
+            <p>
+                Sobrancelhas perfeitas não nascem por acaso. E sim marcando seu horário
+            </p>
+            <button onclick="showForm()">Entre em Contato</button>
+        </div>
+
+        
+        <img src="./img/principal.png" class="mario">
+        <a class="whatsapp" href="https://wa.me/5511945666551?text=OI%C3%A1%2C+gostaria+de+marcar+um+hor%C3%A1rio%21" target="_blank"><img src="./img/whatsapp.png" /></a>
+
+        
+        <a class="instagram" href="https://www.instagram.com/andreiafelixdesign/" target="_blank"><img src="./img/insta.png"></a>
+
+        <form class="fale-conosco" 
+        action="https://formcarry.com/s/zyXk7ryvFWY"
+        method="POST"
+        enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <textarea type="text" placeholder="Digite seu problema"></textarea>
+            <button type="submit">Pedir Orçamento</button>
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.querySelector('.fale-conosco')
+    const background = document.querySelector('.mascara-form')
+
+    function showForm() {
+        form.style.left = '50%'
+        form.style.transform = 'translateX(-50%)'
+        background.style.visibility = 'visible'
+    }
+
+    function hideForm() {
+        form.style.left = '-330px'
+        form.style.transform = 'translateX(0)'
+        background.style.visibility = 'hidden'
+    }
+</script>
+
+</html>
